@@ -1,4 +1,10 @@
-e = ["apple","mango","cherry","papaya"]
+class Fruits:
+    def __init__(self, name, color):
+        self.name = name
+        self.color = color
+    
+    def myfunc(self):
+        print("My name is " + self.name)
 
-[print(i) for i in e]
-print(type(e))
+a = Fruits("apple","red")
+a.myfunc()
