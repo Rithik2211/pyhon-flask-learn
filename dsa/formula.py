@@ -1,5 +1,5 @@
 '''
- 1) print sum of all the numbers in the given series :  n*n+1 // 2
+ 1) print sum of all the numbers in the given series :  n * (n+1) // 2
 
  2) print celcius to fahrenheit :   (c * 9/5) + 32     # 32 degree offset
 
