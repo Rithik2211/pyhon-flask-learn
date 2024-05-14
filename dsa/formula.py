@@ -7,4 +7,6 @@
 
  4) count length of the numbers : math.floor(math.log10(N)+1)     # import math | T-complexity -> O(1)
 
+ 5) factorial of the numbers :  n + fact(n-1) 
+
 '''
