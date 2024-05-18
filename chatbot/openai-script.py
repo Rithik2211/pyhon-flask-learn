@@ -18,4 +18,4 @@ def llm(question, content):
 
   return completion.choices[0].message.content
 
-print(llm("What is the capital of India?", "India is a country in South Asia. It is the 14th largest country by area, with a population of 1.39 billion. It is the world's most populous country and the most populous democracy in the world."))
+print(llm("What is India?", "India is a country world."))
