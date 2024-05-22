@@ -9,4 +9,13 @@
 
  5) factorial of the numbers in recursion :  n * fact(n-1) 
 
+ 6) Digits of thr factorial : 
+    def digitsInFactorial(self,N):
+        if N==0 or N==1:
+            return 1
+        digit = 0
+        for i in range(2, N+1):
+            digit += math.log10(i)
+        return math.floor(digit +1)
+
 '''
