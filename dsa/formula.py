@@ -9,7 +9,7 @@
 
  5) factorial of the numbers in recursion :  n * fact(n-1) 
 
- 6) Digits of thr factorial : 
+ 6) Digits of the factorial : 
     def digitsInFactorial(self,N):
         if N==0 or N==1:
             return 1
