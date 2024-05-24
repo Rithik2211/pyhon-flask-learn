@@ -20,5 +20,18 @@ def selectionSort(a):
         a[i], a[min] = a[min], a[i]
     return a
 
-print(selectionSort(a))
+def insertionSort(a):
+    for i in range(1, len(a)):
+        currentInd = i
+        value = a[i]
+        for j in range(i-1, -1, -1):
+            if a[j] > value:
+                a[j+1] = a[j]
+                currentInd = j
+            else:
+                break
+        a[currentInd] = value
+    return a
+
+print(insertionSort(a))
             
