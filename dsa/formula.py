@@ -47,5 +47,16 @@
        return gcd(b%a, a)
     def lcm(a,b):
         return (a/gcd(a,b))*b
+
+10) Check for the prime : 
+    def isPrime(a):
+        if a == 1:
+            return False
+        i = 2
+        while(i*i <= a):
+            if a %i == 0:
+                return False
+            i += 1
+            return True
     
 '''
