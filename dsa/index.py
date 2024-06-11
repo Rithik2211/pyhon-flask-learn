@@ -21,5 +21,20 @@ def selectionSort(a):
         a[i], a[min] = a[min], a[i]
     return a
 
+def insertionSort(a):
+    for i in range(1, len(a)):
+        key = i
+        val = a[i]
+        for j in range(i-1, -1, -1):
+            if a[j] > val:
+                a[j+1] = a[j]
+                key = j
+            else:
+                break
+        a[key] = val
+    return a
+
+
 print(bubbleSort(a))
 print(selectionSort(a))
+print(insertionSort(a))
