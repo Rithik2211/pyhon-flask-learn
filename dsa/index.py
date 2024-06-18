@@ -1,40 +1,40 @@
-a = [2,4,6,2,1,7,3,5]
+def gcd(a,b):
+    if b == 0:
+        return a
+    return gcd(b, a%b)
+def lcm(a,b):
+    return a * b // gcd(a,b)
 
-def bubbleSort(a) :
-    for i in range(len(a)-1):
-        sorted = False
-        for j in range(len(a)-1-i):
-            if a[j] > a[j+1]:
-                sorted = True
-                a[j], a[j+1] = a[j+1], a[j]
-        if not sorted:
-            break
+def isPrime(n):
+    if n ==1 :
+        return False
+    for i in range(2, n):
+        if n%i == 0:
+            return False
+    return True
 
-    return a
+def checkPrime(n):
+    if n == 1:
+        return False
+    i = 2
+    while (i*i <= n):
+        if n%i == 0:
+            return False
+        i += 1
+    return True
 
-def selectionSort(a):
-    for i in range(len(a)-1):
-        min = i
-        for j in range(i+1, len(a)):
-            if a[j] < a[min]:
-                min = j
-        a[i], a[min] = a[min], a[i]
-    return a
+def primeSuperEff(n):
+    if n==1:
+        return False
+    if n==2 or n==3:
+        return True
+    if n%2 == 0 or n%3 == 0:
+        return False
+    i = 5
+    while(i*i <= n):
+        if (n%i == 0 or n % (i+2) == 0):
+            return False
+        i +=6
+    return True    
 
-def insertionSort(a):
-    for i in range(1, len(a)):
-        key = i
-        val = a[i]
-        for j in range(i-1, -1, -1):
-            if a[j] > val:
-                a[j+1] = a[j]
-                key = j
-            else:
-                break
-        a[key] = val
-    return a
-
-
-print(bubbleSort(a))
-print(selectionSort(a))
-print(insertionSort(a))
+print(primeSuperEff(1031))

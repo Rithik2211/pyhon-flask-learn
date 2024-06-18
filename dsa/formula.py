@@ -42,22 +42,51 @@
    solution : 
 
     def gcd(a,b):
-       if a==0:
-        return b
-       return gcd(b%a, a)
+        if b == 0:
+            return a
+        return gcd(b, a%b)
     def lcm(a,b):
-        return (a/gcd(a,b))*b
+        return a * b // gcd(a,b)
 
 10) Check for the prime : 
-    def isPrime(a):
-        if a == 1:
+   worst case O(n)
+    def isPrime(n):
+        if n ==1 :
+            return False
+        for i in range(2, n):
+            if n%i == 0:
+                return False
+        return True
+
+    - Divisors are always appear in the pair
+    - if (a,b) if a <= b ->  (a*a <= b) or (a <= sqrt(b))
+
+    best case O(sqrt(n)):
+    def checkPrime(n):
+        if n == 1:
             return False
         i = 2
-        while(i*i <= a):
-            if a %i == 0:
+        while (i*i <= n):
+            if n%i == 0:
                 return False
             i += 1
+        return True
+    
+    super efficient way :
+
+    def primeSuperEff(n):
+        if n==1:
+            return False
+        if n==2 or n==3:
             return True
+        if n%2 == 0 or n%3 == 0:
+            return False
+        i = 5
+        while(i*i <= n):
+            if (n%i == 0 or n % (i+2) == 0):
+                return False
+            i +=6
+        return True 
 
 11) 
     
