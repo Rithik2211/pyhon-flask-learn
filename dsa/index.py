@@ -19,6 +19,7 @@ def primeFactor(n):
             x = i
             while n%x == 0:
                 a.append(i)
+                print(i)
                 x *= i
 
 primeFactor(100)
