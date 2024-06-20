@@ -112,5 +112,23 @@ def primeFactor(n):
             while n%x == 0:
                 a.append(i)
                 x *= i
+
+12) All divisors of Number : 
+
+ efficient solution : 
+ - divisors always appears in pairs 30 : (1,30), (2, 15),(3,10),(5,6)
+ - one of the divisors in the pair should be smaller than or equal to root n
+
+ def printDivisors(n):
+    i=1
+    while((i*i) < n):  # divisors from 1 to root n excuded
+        if(n%i == 0) :
+            print(i)
+        i+=1
+    while (i >= i): # divisors from root n includes from 1
+        if(n%i == 0):
+            print(n//i)
+        i-=1
+
     
 '''

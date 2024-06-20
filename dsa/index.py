@@ -1,26 +1,13 @@
-def isPrime(n):
-    if n==1:
-        return False
-    if n==2 or n==3:
-        return True
-    if n%2==0 or n%3==0:
-        return False
-    i=5
-    while (i*i <= n):
-        if n%i==0 or n%(i+2)==0:
-            return False
-        i+=6
-    return True
+def printDivisors(n):
+    i=1
+    while((i*i) < n):  # divisors from 1 to root n excuded
+        if(n%i == 0) :
+            print(i)
+        i+=1
+    while (i >= i): # divisors from root n includes from 1
+        if(n%i == 0):
+            print(n//i)
+        i-=1
 
-a = []
-def primeFactor(n):
-    for i in range(2,n+1):
-        if isPrime(i):
-            x = i
-            while n%x == 0:
-                a.append(i)
-                print(i)
-                x *= i
 
-primeFactor(100)
-print(a)
+printDivisors(25)
