@@ -45,7 +45,7 @@ def quickSort(a):
 
  quickSort(a)      
 
- 5) merge sort :
+    
   
   
 
