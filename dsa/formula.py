@@ -129,6 +129,4 @@ def primeFactor(n):
         if(n%i == 0):
             print(n//i)
         i-=1
-
-    
 '''
