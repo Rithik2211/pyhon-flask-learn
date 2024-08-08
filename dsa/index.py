@@ -23,3 +23,11 @@ def soe(num):
     return a
 
 print(soe(23))
+
+def median(arr):
+    n = len(arr)
+    arr.sort()
+    if n % 2 == 0:
+        return (arr[n//2] + arr[n//2 - 1]) / 2
+    else:
+        return arr[n//2]
